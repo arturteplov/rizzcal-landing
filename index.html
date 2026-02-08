@@ -127,118 +127,36 @@
     .store-btn-ios { }
     .store-btn-android { opacity: 0.6; cursor: not-allowed; pointer-events: none; }
 
-    /* Right column – phone mockups */
+    /* Right column – app screenshots */
     .phones {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      gap: 24px;
       min-height: 420px;
       padding: 20px 0;
+      flex-wrap: wrap;
     }
-    .phone-wrap {
-      position: relative;
+    .screenshot-wrap {
+      max-width: 200px;
+      flex-shrink: 0;
+    }
+    .screenshot-wrap img {
       width: 100%;
-      max-width: 280px;
-    }
-    .phone {
-      width: 100%;
-      aspect-ratio: 9 / 19.5;
-      max-height: 520px;
-      background: #111;
-      border-radius: 36px;
-      padding: 10px;
-      box-shadow: 0 24px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
-      position: relative;
-    }
-    .phone::before {
-      content: '';
-      position: absolute;
-      top: 12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 22px;
-      background: #000;
-      border-radius: 999px;
-      z-index: 1;
-    }
-    .phone-screen {
-      width: 100%;
-      height: 100%;
-      border-radius: 28px;
-      overflow: hidden;
-      background: #0A0A0A;
-    }
-    .phone-left  { transform: rotate(-6deg) translateY(10px); }
-    .phone-right { transform: rotate(6deg) translateY(10px); position: absolute; left: 50%; top: 50%; margin-left: -120px; margin-top: -260px; }
-    @media (max-width: 900px) {
-      .phones { flex-direction: column; min-height: 360px; gap: 16px; }
-      .phone-left { transform: rotate(-4deg); }
-      .phone-right { position: static; margin: 0; transform: rotate(4deg); }
-      .phone { max-height: 400px; }
-    }
-
-    /* In-phone UI placeholders */
-    .app-bar {
-      height: 52px;
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(26,26,26,0.8);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .app-bar-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #FF2DB2, #7C3AED);
-    }
-    .app-bar-title { font-size: 0.75rem; font-weight: 800; color: #fff; }
-    .app-bar-sub { font-size: 0.65rem; color: rgba(255,255,255,0.5); }
-    .app-body { padding: 16px; }
-    .app-stat-row {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .app-stat {
-      flex: 1;
-      background: rgba(255,45,178,0.12);
-      border: 1px solid rgba(255,45,178,0.25);
-      border-radius: 12px;
-      padding: 12px;
-      text-align: center;
-    }
-    .app-stat-val { font-size: 1.1rem; font-weight: 900; color: #FF2DB2; }
-    .app-stat-lbl { font-size: 0.6rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; }
-    .app-cta {
+      height: auto;
       display: block;
-      width: 100%;
-      height: 56px;
       border-radius: 28px;
-      background: linear-gradient(135deg, #FF2DB2, #7C3AED);
-      margin-top: 16px;
-      border: none;
-      cursor: default;
+      box-shadow: 0 24px 48px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.08);
     }
-    .app-log-line {
-      height: 36px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 8px;
-      margin-bottom: 8px;
+    .screenshot-wrap.screenshot-left  { transform: rotate(-5deg); }
+    .screenshot-wrap.screenshot-right { transform: rotate(5deg); }
+    @media (max-width: 900px) {
+      .phones { flex-direction: row; justify-content: center; gap: 16px; min-height: 320px; }
+      .screenshot-wrap { max-width: 160px; }
+      .screenshot-wrap.screenshot-left  { transform: rotate(-4deg); }
+      .screenshot-wrap.screenshot-right { transform: rotate(4deg); }
     }
-    .rizz-score {
-      text-align: center;
-      padding: 20px;
-      background: linear-gradient(135deg, rgba(255,45,178,0.15), rgba(124,58,237,0.1));
-      border-radius: 16px;
-      border: 1px solid rgba(255,45,178,0.2);
-      margin-top: 12px;
-    }
-    .rizz-score .val { font-size: 1.5rem; font-weight: 900; color: #FF2DB2; }
-    .rizz-score .lbl { font-size: 0.65rem; color: rgba(255,255,255,0.6); }
 
     /* Footer */
     .footer {
@@ -282,57 +200,18 @@
         </a>
         <span class="store-btn store-btn-android" title="Coming soon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5h15c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-15c-.83 0-1.5-.67-1.5-1.5zM8 19h8v-2H8v2zm0-4h8v-2H8v2zm0-6h5v-1H8v1z"/></svg>
-          GET IT ON Google Play
+          Get it on Google Play (coming soon)
         </span>
       </div>
     </div>
 
     <div class="hero-right">
       <div class="phones">
-        <div class="phone-wrap phone-left">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="app-bar">
-                <div class="app-bar-icon"></div>
-                <div>
-                  <div class="app-bar-title">RizzCal AI</div>
-                  <div class="app-bar-sub">Snap.Track.Win.</div>
-                </div>
-              </div>
-              <div class="app-body">
-                <div class="app-stat-row">
-                  <div class="app-stat"><div class="app-stat-val">1,240</div><div class="app-stat-lbl">Left</div></div>
-                  <div class="app-stat"><div class="app-stat-val">2,200</div><div class="app-stat-lbl">Goal</div></div>
-                </div>
-                <div class="app-log-line" style="width: 90%;"></div>
-                <div class="app-log-line" style="width: 70%;"></div>
-                <div class="app-log-line" style="width: 85%;"></div>
-                <div class="app-cta"></div>
-              </div>
-            </div>
-          </div>
+        <div class="screenshot-wrap screenshot-left">
+          <img src="screenshot-scan.png" alt="RizzCal AI – Scan your food" width="200" height="433" />
         </div>
-        <div class="phone-wrap phone-right">
-          <div class="phone">
-            <div class="phone-screen">
-              <div class="app-bar">
-                <div class="app-bar-icon"></div>
-                <div>
-                  <div class="app-bar-title">Rizz</div>
-                  <div class="app-bar-sub">Early access</div>
-                </div>
-              </div>
-              <div class="app-body">
-                <div class="rizz-score">
-                  <div class="val">72/100</div>
-                  <div class="lbl">YOUR RIZZ SCORE</div>
-                </div>
-                <div class="app-log-line" style="width: 95%;"></div>
-                <div class="app-log-line" style="width: 60%;"></div>
-                <div class="app-cta"></div>
-              </div>
-            </div>
-          </div>
+        <div class="screenshot-wrap screenshot-right">
+          <img src="screenshot-result.png" alt="RizzCal AI – Food detected and Rizz score" width="200" height="433" />
         </div>
       </div>
     </div>
